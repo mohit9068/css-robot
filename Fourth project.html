@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<head>
+<title>Fourth Project</title>
+<link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<style>
+
+.robot1 {
+  position: relative;
+  left: 500px;
+}
+
+.beep {
+  width: 5px;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 10px solid #777;
+  border-bottom: 80px solid #888;
+  position: relative;
+  left: 160px;
+}
+
+@keyframes blink {
+  50% {
+    background: radial-gradient(circle, blue 15%, transparent 40%), black;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background: -webkit-radial-gradient(circle, blue 15%, transparent 40%), black;
+  }
+}
+@-moz-keyframes blink {
+  50% {
+    background: -moz-radial-gradient(circle, blue 15%, transparent 40%), black;
+  }
+}
+.laser {
+  animation: blink .5s infinite;
+  -webkit-animation: blink .5s infinite;
+  -moz-animation: blink .5s infinite;
+}
+.brain {
+  background: -webkit-radial-gradient(circle, white 20%, transparent 35%), black;
+  
+  background-size: 100px 150px;
+  background: -webkit;
+  height: 150px;
+  width: 200px;
+  
+  border-bottom: 20px inset #666;
+  position: relative;
+  left: 70px;
+}
+.rectangle{
+  
+  
+  background-color: grey;
+  height: 20px;
+  width: 50px;
+  position: relative;
+  border-top: 5px inset #666;
+  border-bottom:5px outset #666 ;
+  bottom: -115px;
+  left: 75px;
+  }
+  .rectangle2{
+  
+  
+  background-color: black;
+  height: 10px;
+  width: 60px;
+  position: relative;
+  bottom: -140px;
+  left: 70px;
+  border-bottom: 10px dashed white;00
+  }
+.torso {
+  height: 0;
+  width: 140px;
+  border-top: 300px solid black;
+  border-left: 0px solid black;
+  border-right: 100px solid black; 
+  border-radius: 20px 20px 10px 10px;
+  position: relative;
+  left: 48px;
+  bottom: -18px;
+}
+
+
+.left {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+ 
+  font-size: 30px;
+  color: #666;
+  transform: rotate(140deg);
+  -webkit-transform: rotate(330deg);
+  -moz-transform: rotate(250deg);
+  position: relative;
+  border: 10px solid black;
+  top: -269px;
+  left: -103px;
+  z-index: -1;
+}
+.right {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  
+  font-size: 30px ;
+  color: #666;
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(150deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+  position: relative;
+  border: 10px solid black;
+  top: -325px;
+  left: 201px;
+  z-index: -1;
+}
+
+.leg1 {
+  height: 100px;
+  width: 20px;
+  background: black;
+  border: 10px solid grey;
+  position: relative;
+  left: 100px;
+  top: 5px;
+  z-index: -1;
+}
+.leg2 {
+  height: 100px;
+  width: 20px;
+  background: black;
+  border: 10px solid grey;
+  position: relative;
+  left: 199px;
+  top: -115px;
+  z-index: -1;
+  
+} 
+.flash{
+   background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    top: -1600px;
+  }
+  .color{
+ background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    top: -1600px;
+  }  
+ 
+  .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+
+@keyframes dance{
+  from{
+    
+    left: 800px;
+  }
+  from{
+    right:100px;
+    }
+  }
+@-webkit-keyframes dance{
+  from{
+  left: 800px;
+  }
+  }
+@-moz-keyframes dance{
+  from{
+    left:800px;
+  }
+  }
+  
+
+.robot1{
+  animation: dance 1s infinite;
+  -webkit-animation: dance 10s infinite;
+  -moz-animation: dance 4s infinite;;
+  position: relative;
+  top: 20px;
+  left: 400px;
+ 
+  }
+  .robot2{
+  animation: dance 2s infinite;
+  -webkit-animation: dance 10s infinite;
+  -moz-animation: dance 4s infinite;;
+  position: relative;
+  top: -780px;
+  left: 1300px;
+ 
+  }
+body{
+  background: rgba(red, green, blue, 1);
+  }
+</style>
+</head>
+
+<body>
+
+<div class="robot1">
+  <div class="beep"></div>
+  <div class="brain">
+  <div class="rectangle"></div>
+  <div class="rectangle2"></div>
+  </div>
+  <div class="torso">
+    <div class="left">I</div>
+    <div class="right">I</div>
+    
+  </div>
+  <div class="leg1"></div>
+  <div class="leg2"></div>
+</div>
+
+<div class="robot2">
+  <div class="beep"></div>
+  <div class="brain">
+  <div class="rectangle"></div>
+  <div class="rectangle2"></div>
+  </div>
+  <div class="torso">
+    <div class="left">I</div>
+    <div class="right">I</div>
+  </div>
+  <div class="leg1"></div>
+  <div class="leg2"></div>
+</div>
+
+<button class="flash button1">laser eyes on/off</button>
+<button class="color button2">change color!</button>
+
+
+<script>
+// When eyes button is clicked, toggle laser class on brain
+$(".flash").click(function() {
+  $(".brain").toggleClass('laser');
+});
+
+// When color button is clicked...
+$(".color").click(function() {
+  // assign each named color a random number 0-255
+  var red = Math.floor(Math.random() * 255);
+  var green = Math.floor(Math.random() * 255);
+  var blue = Math.floor(Math.random() * 255);
+  //Generate an RGBA value from red, green, and blue
+  var randomRGBA = 'rgba('+red+','+green+','+blue+',1)';
+  
+  //Display the RGBA value in an alert window
+$("body").css("background", randomRGBA);
+//  alert(randomRGBA);
+});
+</script>
+</body>
